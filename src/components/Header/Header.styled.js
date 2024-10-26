@@ -34,7 +34,7 @@ export const NavList = styled.ul`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 32px;
   font-weight: 600;
   & a {
     padding: 14px 0;
@@ -57,4 +57,18 @@ export const LogoContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+`;
+
+export const Text = styled.span`
+  font-family: 'Inter', sans-serif; // Необхідно переконатися, що шрифт підключено
+  font-weight: 500; // Medium weight
+  font-size: 16px;
+`;
+
+export const FirstWord = styled(Text)`
+  color: #101828;
+`;
+
+export const SecondWord = styled(Text)`
+  color: #475467;
 `;
