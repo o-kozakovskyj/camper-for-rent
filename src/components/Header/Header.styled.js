@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 16px 64px;
+  background: #F7F7F7;
+  border-bottom: 1px solid #F2F4F7;
 `;
 
 export const NavigationContainer = styled.div`
@@ -16,17 +15,12 @@ export const NavigationContainer = styled.div`
 `;
 
 export const NavLogo = styled.div`
-  display: flex;
-  @media (max-width: 768px) {
-    display: none;
-  }
+position: absolute; 
+font-weight: 600;
 `;
 
 export const NavContainer = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+
 `;
 
 export const NavList = styled.ul`
@@ -35,7 +29,7 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 32px;
-  font-weight: 600;
+
   & a {
     padding: 14px 0;
   }
@@ -45,24 +39,15 @@ export const NavList = styled.ul`
   }
 `;
 
-export const LogoContainer = styled.div`
-  width: 50px;
-  height: 50px;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  & img {
-    width: 100%;
-    height: 100%;
-  }
-`;
 
 export const Text = styled.span`
-  font-family: 'Inter', sans-serif; // Необхідно переконатися, що шрифт підключено
-  font-weight: 500; // Medium weight
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 16px;
+
+
+
+
 `;
 
 export const FirstWord = styled(Text)`
@@ -72,3 +57,5 @@ export const FirstWord = styled(Text)`
 export const SecondWord = styled(Text)`
   color: #475467;
 `;
+
+

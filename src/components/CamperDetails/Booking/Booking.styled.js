@@ -6,6 +6,8 @@ export const BookingContainer = styled.div`
 
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
+
+  width: 641px;
 `;
 
 export const FormHeader = styled.h3`

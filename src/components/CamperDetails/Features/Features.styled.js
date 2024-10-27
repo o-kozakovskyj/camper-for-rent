@@ -4,6 +4,15 @@ export const MoreDetailsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 24px;
+
+`;
+
+
+export const MoreDetailsDiv = styled.div`
+padding: 44px 52px;
+  
+border: 1px solid rgba(16, 24, 40, 0.2);
+border-radius: 10px;
 `;
 
 export const DetailsList = styled.ul`
@@ -62,3 +71,4 @@ export const HorizontalLine = styled.div`
   background-color: var(--main);
   opacity: 0.1;
 `;
+

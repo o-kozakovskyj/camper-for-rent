@@ -34,7 +34,6 @@ const CatalogPage = () => {
   return (
     <CatalogPageContainer>
       <CatalogFilterForm />
-
       <CatalogContainer>
         <CamperCardsContainer>
           {filteredAdverts.length > 0

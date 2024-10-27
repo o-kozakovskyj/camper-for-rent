@@ -68,7 +68,7 @@ export const PriceTag = styled.p`
 export const CamperImagesGroup = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  justify-content: space-between;
 
   margin: 0 0 24px 0;
 `;

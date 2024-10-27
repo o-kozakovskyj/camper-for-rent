@@ -6,6 +6,7 @@ import {
   MoreDetailsContainer,
   VehicleDetailsHeader,
   VehicleDetailsList,
+  MoreDetailsDiv,
 } from "./Features.styled";
 import Booking from "../Booking/Booking";
 
@@ -25,14 +26,14 @@ const Features = ({ camperInfo }) => {
 
   return (
     <MoreDetailsContainer>
-      <div>
+      <MoreDetailsDiv>
         <DetailsList>
-          <li>
+          {/* <li>
             <svg width="20px" height="20px" fill="none" className="icon-fill">
               <use href={`${sprite}#icon-users`} />
             </svg>
             <span>{adults} adults</span>
-          </li>
+          </li> */}
 
           <li>
             <svg width="20px" height="20px" fill="none">
@@ -62,38 +63,38 @@ const Features = ({ camperInfo }) => {
             <span>Kitchen</span>
           </li>
 
-          <li>
+          {/* <li>
             <svg width="20px" height="20px" fill="none">
               <use href={`${sprite}#icon-bed`} />
             </svg>
             <span>{beds} beds</span>
-          </li>
+          </li> */}
 
-          <li>
+          {/* <li>
             <svg width="20px" height="20px" fill="none">
               <use href={`${sprite}#icon-conditioner`} />
             </svg>
             <span>{airConditioner} air conditioner</span>
-          </li>
+          </li> */}
 
-          <li>
+          {/* <li>
             <svg width="20px" height="20px" fill="none">
               <use href={`${sprite}#icon-cd`} />
             </svg>
             <span>CD</span>
-          </li>
+          </li> */}
           <li>
             <svg width="20px" height="20px" fill="none">
               <use href={`${sprite}#icon-radio`} />
             </svg>
             <span>Radio</span>
           </li>
-          <li>
+          {/* <li>
             <svg width="20px" height="20px" fill="none">
               <use href={`${sprite}#icon-hob`} />
             </svg>
             <span>{hob} hob</span>
-          </li>
+          </li> */}
         </DetailsList>
 
         <VehicleDetailsHeader>Vehicle Details</VehicleDetailsHeader>
@@ -120,7 +121,7 @@ const Features = ({ camperInfo }) => {
             <span>Consumption</span> <span>{consumption}</span>
           </li>
         </VehicleDetailsList>
-      </div>
+      </MoreDetailsDiv>
 
       <Booking />
     </MoreDetailsContainer>
