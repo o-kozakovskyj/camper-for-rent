@@ -3,23 +3,18 @@ import {
   NavContainer,
   NavList,
   NavLogo,
-  FirstWord,
-  SecondWord,
-  
 } from "./Header.styled";
+import logo from "../../assets/svg/logo.svg";
 
-import { NavLink, Link, } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <HeaderContainer >
+    <HeaderContainer>
       <NavContainer>
         <NavLogo>
           <Link to={"/"}>
-            {/* <img src={logo} alt="Your SVG" width="190px" height="40px" /> */}
-
-            <FirstWord>Travel</FirstWord>
-            <SecondWord>Truck</SecondWord>
+            <img src={logo} alt="Your SVG" width="112px" />
           </Link>
         </NavLogo>
         <NavList>
@@ -29,9 +24,6 @@ const Header = () => {
           <li>
             <NavLink to={"/catalog"}>Catalog</NavLink>
           </li>
-          {/* <li>
-            <NavLink to={"/favorites"}>Favorites</NavLink>
-          </li> */}
         </NavList>
       </NavContainer>
     </HeaderContainer>

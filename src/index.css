@@ -25,10 +25,6 @@ a {
   text-decoration: none;
 }
 
-svg {
-  stroke: var(--main);
-}
-
 input {
   outline: 0;
 }

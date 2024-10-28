@@ -40,8 +40,8 @@ const CatalogFilterForm = () => {
           <LocationTag>Location</LocationTag>
 
           <LocationContainer>
-            <svg width="18px" height="20px" fill="none">
-              <use href={`${sprite}#icon-location`} />
+            <svg width="18px" height="20px" className="icon-fill">
+              <use href={`${sprite}#icon-Vector`} />
             </svg>
             <LocationInput
               type="text"
@@ -65,12 +65,7 @@ const CatalogFilterForm = () => {
           >
             <FilterButton>
               <Field type="checkbox" name="equipment" value="ac" hidden />
-              <FilterIcon
-                width="32px"
-                height="32px"
-                fill="none"
-                className="icon-fill"
-              >
+              <FilterIcon width="32px" height="32px" className="icon-fill">
                 <use href={`${sprite}#icon-ac`} />
               </FilterIcon>
               <p>AC</p>
@@ -84,8 +79,8 @@ const CatalogFilterForm = () => {
                 hidden
               />
 
-              <FilterIcon width="32px" height="32px" fill="none">
-                <use href={`${sprite}#icon-transmission`} />
+              <FilterIcon width="32px" height="32px" className="icon-fill">
+                <use href={`${sprite}#icon-diagram`} />
               </FilterIcon>
 
               <p>Automatic</p>
@@ -94,8 +89,8 @@ const CatalogFilterForm = () => {
             <FilterButton>
               <Field type="checkbox" name="equipment" value="kitchen" hidden />
 
-              <FilterIcon width="32px" height="32px" fill="none">
-                <use href={`${sprite}#icon-kitchen`} />
+              <FilterIcon width="32px" height="32px" className="icon-fill">
+                <use href={`${sprite}#icon-cup-hot`} />
               </FilterIcon>
 
               <p>Kitchen</p>
@@ -104,7 +99,7 @@ const CatalogFilterForm = () => {
             <FilterButton>
               <Field type="checkbox" name="equipment" value="tv" hidden />
 
-              <FilterIcon width="32px" height="32px" fill="none">
+              <FilterIcon width="32px" height="32px" className="icon-fill">
                 <use href={`${sprite}#icon-tv`} />
               </FilterIcon>
 
@@ -114,11 +109,11 @@ const CatalogFilterForm = () => {
             <FilterButton>
               <Field type="checkbox" name="equipment" value="shower" hidden />
 
-              <FilterIcon width="32px" height="32px" fill="none">
-                <use href={`${sprite}#icon-shower`} />
+              <FilterIcon width="32px" height="32px" className="icon-fill">
+                <use href={`${sprite}#icon-ph-shower`} />
               </FilterIcon>
 
-              <p>Shower/WC</p>
+              <p>Bathroom</p>
             </FilterButton>
           </EquipmentButtonGroup>
 
@@ -129,8 +124,8 @@ const CatalogFilterForm = () => {
           <TypeButtonGroup role="group" aria-labelledby="vehicle-type-group">
             <FilterButton>
               <Field type="radio" name="type" value="van" hidden />
-              <FilterIcon width="32px" height="32px" fill="none">
-                <use href={`${sprite}#icon-van`} />
+              <FilterIcon width="32px" height="32px" className="icon-fill">
+                <use href={`${sprite}#icon-bi_grid-1x2`} />
               </FilterIcon>
               <p>Van</p>
             </FilterButton>
@@ -138,8 +133,8 @@ const CatalogFilterForm = () => {
             <FilterButton>
               <Field type="radio" name="type" value="integrated" hidden />
 
-              <FilterIcon width="32px" height="32px" fill="none">
-                <use href={`${sprite}#icon-integrated`} />
+              <FilterIcon width="32px" height="32px" className="icon-fill">
+                <use href={`${sprite}#icon-bi_grid`} />
               </FilterIcon>
 
               <p>Fully Integrated</p>
@@ -148,8 +143,8 @@ const CatalogFilterForm = () => {
             <FilterButton>
               <Field type="radio" name="type" value="alcove" hidden />
 
-              <FilterIcon width="32px" height="32px" fill="none">
-                <use href={`${sprite}#icon-alcove`} />
+              <FilterIcon width="32px" height="32px" className="icon-fill">
+                <use href={`${sprite}#icon-bi_grid-3x3-gap`} />
               </FilterIcon>
 
               <p>Alcove</p>

@@ -80,6 +80,7 @@ const CamperCard = ({ camperInfo, favorited }) => {
               width="24px"
               height="24px"
               fill="none"
+              stroke="var(--main)"
               onClick={handleClickFavorite}
               className={isFavorited && "favorited"}
             >
@@ -98,8 +99,8 @@ const CamperCard = ({ camperInfo, favorited }) => {
               </RatingInfo>
 
               <LocationContainer>
-                <svg width="16px" height="16px" fill="none">
-                  <use href={`${sprite}#icon-location`} />
+                <svg width="16px" height="16px" className="icon-fill">
+                  <use href={`${sprite}#icon-Vector`} />
                 </svg>
                 <span>{location}</span>
               </LocationContainer>
@@ -110,38 +111,27 @@ const CamperCard = ({ camperInfo, favorited }) => {
 
           <DetailsContainer>
             <li>
-              <svg width="20px" height="20px" fill="none" className="icon-fill">
-                <use href={`${sprite}#icon-users`} />
-              </svg>
-              <span>{adults} adults</span>
-            </li>
-            <li>
-              <svg width="20px" height="20px" fill="none">
-                <use href={`${sprite}#icon-transmission`} />
+              <svg width="20px" height="20px">
+                <use href={`${sprite}#icon-diagram`} />
               </svg>
               <span>{capitalizeFirstLetter(transmission)}</span>
             </li>
             <li>
-              <svg width="20px" height="20px" fill="none" className="icon-fill">
+              <svg width="20px" height="20px" className="icon-fill">
                 <use href={`${sprite}#icon-petrol`} />
               </svg>
               <span>{capitalizeFirstLetter(engine)}</span>
             </li>
             <li>
-              <svg width="20px" height="20px" fill="none">
-                <use href={`${sprite}#icon-kitchen`} />
+              <svg width="20px" height="20px">
+                <use href={`${sprite}#icon-cup-hot`} />
               </svg>
               <span>Kitchen</span>
             </li>
+
             <li>
-              <svg width="20px" height="20px" fill="none">
-                <use href={`${sprite}#icon-bed`} />
-              </svg>
-              <span>{beds} beds</span>
-            </li>
-            <li>
-              <svg width="20px" height="20px" fill="none" className="icon-fill">
-                <use href={`${sprite}#icon-ac`} />
+              <svg width="20px" height="20px" className="icon-fill">
+                <use href={`${sprite}#icon-wind`} />
               </svg>
               <span>AC</span>
             </li>

@@ -1,18 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MoreDetailsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 24px;
-
 `;
 
-
 export const MoreDetailsDiv = styled.div`
-padding: 44px 52px;
-  
-border: 1px solid rgba(16, 24, 40, 0.2);
-border-radius: 10px;
+  padding: 24px 24px;
+  border-radius: 10px;
+  background: #f7f7f7;
 `;
 
 export const DetailsList = styled.ul`
@@ -20,10 +17,8 @@ export const DetailsList = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
-
   font-weight: 500;
   line-height: 1.25;
-
   margin: 0 0 44px 0;
 
   & li {
@@ -44,7 +39,6 @@ export const VehicleDetailsList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 14px;
-
   font-size: 18px;
   font-weight: 500;
   line-height: 1.3;
@@ -58,7 +52,6 @@ export const VehicleDetailsList = styled.ul`
 
 export const VehicleDetailsHeader = styled.h3`
   margin: 0 0 24px 0;
-
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
@@ -67,8 +60,6 @@ export const VehicleDetailsHeader = styled.h3`
 export const HorizontalLine = styled.div`
   margin: 0 0 24px 0;
   height: 2px;
-
   background-color: var(--main);
   opacity: 0.1;
 `;
-

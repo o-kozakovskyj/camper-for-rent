@@ -3,16 +3,13 @@ import { PrimaryButton } from "../../../styles/components.styled";
 
 export const BookingContainer = styled.div`
   padding: 24px;
-
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 10px;
-
   width: 641px;
 `;
 
 export const FormHeader = styled.h3`
   margin: 0 0 8px 0;
-
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
@@ -20,7 +17,6 @@ export const FormHeader = styled.h3`
 
 export const FormSecondaryText = styled.p`
   margin: 0 0 24px 0;
-
   color: var(--secondary);
 `;
 

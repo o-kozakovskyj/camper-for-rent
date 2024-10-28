@@ -28,73 +28,40 @@ const Features = ({ camperInfo }) => {
     <MoreDetailsContainer>
       <MoreDetailsDiv>
         <DetailsList>
-          {/* <li>
-            <svg width="20px" height="20px" fill="none" className="icon-fill">
-              <use href={`${sprite}#icon-users`} />
-            </svg>
-            <span>{adults} adults</span>
-          </li> */}
-
           <li>
-            <svg width="20px" height="20px" fill="none">
-              <use href={`${sprite}#icon-transmission`} />
+            <svg width="20px" height="20px">
+              <use href={`${sprite}#icon-diagram`} />
             </svg>
             <span>{capitalizeFirstLetter(transmission)}</span>
           </li>
 
           <li>
-            <svg width="20px" height="20px" fill="none" className="icon-fill">
+            <svg width="20px" height="20px" className="icon-fill">
               <use href={`${sprite}#icon-ac`} />
             </svg>
             <span>AC</span>
           </li>
 
           <li>
-            <svg width="20px" height="20px" fill="none" className="icon-fill">
+            <svg width="20px" height="20px" className="icon-fill">
               <use href={`${sprite}#icon-petrol`} />
             </svg>
             <span>{capitalizeFirstLetter(engine)}</span>
           </li>
 
           <li>
-            <svg width="20px" height="20px" fill="none">
-              <use href={`${sprite}#icon-kitchen`} />
+            <svg width="20px" height="20px">
+              <use href={`${sprite}#icon-cup-hot`} />
             </svg>
             <span>Kitchen</span>
           </li>
 
-          {/* <li>
-            <svg width="20px" height="20px" fill="none">
-              <use href={`${sprite}#icon-bed`} />
-            </svg>
-            <span>{beds} beds</span>
-          </li> */}
-
-          {/* <li>
-            <svg width="20px" height="20px" fill="none">
-              <use href={`${sprite}#icon-conditioner`} />
-            </svg>
-            <span>{airConditioner} air conditioner</span>
-          </li> */}
-
-          {/* <li>
-            <svg width="20px" height="20px" fill="none">
-              <use href={`${sprite}#icon-cd`} />
-            </svg>
-            <span>CD</span>
-          </li> */}
           <li>
-            <svg width="20px" height="20px" fill="none">
-              <use href={`${sprite}#icon-radio`} />
+            <svg width="20px" height="20px" className="icon-fill">
+              <use href={`${sprite}#icon-ui-radios`} />
             </svg>
             <span>Radio</span>
           </li>
-          {/* <li>
-            <svg width="20px" height="20px" fill="none">
-              <use href={`${sprite}#icon-hob`} />
-            </svg>
-            <span>{hob} hob</span>
-          </li> */}
         </DetailsList>
 
         <VehicleDetailsHeader>Vehicle Details</VehicleDetailsHeader>

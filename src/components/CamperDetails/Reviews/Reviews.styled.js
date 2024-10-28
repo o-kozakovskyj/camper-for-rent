@@ -7,6 +7,7 @@ export const ReviewsBlockContainer = styled.div`
 `;
 
 export const ReviewsList = styled.ul`
+  width: 641px;
   display: flex;
   flex-direction: column;
   gap: 24px;
