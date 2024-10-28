@@ -1,8 +1,28 @@
-# React + Vite
+TravelTrucks
+Додаток для кожного, хто любить круті подорожі кампером! Тут кожен може знайти та орендувати кемпери в Україні. Щоб розпочати оренду, просто відвідайте веб-додаток і перегляньте каталог. Використовуйте функції пошуку та фільтрації, щоб знайти кемпери, які відповідають вашим вимогам, і зберігайте свої вподобані варіанти до обраного.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Маршрути та функції
+/ - домашня сторінка з загальним оглядом послуг, що надаються компанією, та особливостей додатку. У верхній частині сторінки користувач може перейти на інші сторінки веб-додатку.
+/catalog - сторінка каталогу містить каталог доступних для оренди кемперів. Доступні фільтри для пошуку конфігурації кемперів. Клікнувши на кнопку "Show more", відкривається детальна інформація про кожен кемпер, і користувач може надіслати запит на бронювання.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Перегляд у режимі онлайн
+https://vercel.com/olenas-projects-0ab4f58a/camper-for-rent/6FBApTXjW7ooWuPk8Uqn3xQuNAJi
+
+Технології
+Бекенд: https://mockapi.io/
+API: Axios для HTTP запитів
+Фронтенд: React.js, Redux Toolkit
+Бібліотеки: styled-components, yup, uuid, formik
+Розгортання: https://vercel.com/
+
+
+Ви також можете клонувати проект та відкрити його на локальному сервері.
+
+Склонувати репозиторій: git clone https://github.com/olita16/camper-for-rent
+Встановити залежності: npm install
+Запустити проект: npm run dev
+
+
+
+
