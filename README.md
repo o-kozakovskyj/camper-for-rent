@@ -10,7 +10,7 @@ TravelTrucks
 
 Перегляд у режимі онлайн
 
-https://vercel.com/olenas-projects-0ab4f58a/camper-for-rent/6FBApTXjW7ooWuPk8Uqn3xQuNAJi
+https://camper-for-rent-omega.vercel.app/
 
 Технології
 
