@@ -22,8 +22,6 @@ API: Axios для HTTP запитів
 
 Бібліотеки: styled-components, yup, uuid, formik
 
-Розгортання: https://vercel.com/
-
 
 Ви також можете клонувати проект та відкрити його на локальному сервері.
 
