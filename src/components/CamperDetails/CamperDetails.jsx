@@ -50,7 +50,7 @@ const CamperDetails = ({ camperInfo }) => {
 
           <LocationContainer>
             <svg width="16px" height="16px" fill="none">
-              <use href={`${sprite}#icon-location`} />
+              <use href={`${sprite}#icon-Vector`} />
             </svg>
             <span>{location}</span>
           </LocationContainer>

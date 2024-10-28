@@ -54,3 +54,12 @@ export const SendButton = styled(PrimaryButton)`
 export const ErrorText = styled.span`
   color: red;
 `;
+
+
+export const SuccessMessage = styled.p`
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px 12px;
+  text-align: center;
+`;

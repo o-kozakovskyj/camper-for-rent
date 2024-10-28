@@ -38,7 +38,7 @@ const Modal = ({ children, open, onClose }) => {
           <ModalCloseButton
             width="32px"
             height="32px"
-            fill="none"
+            className="icon-fill"
             onClick={handleCloseClick}
           >
             <use href={`${sprite}#icon-close`} />

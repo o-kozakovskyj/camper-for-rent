@@ -34,4 +34,5 @@ export const ModalCloseButton = styled.svg`
   right: 24px;
   cursor: pointer;
   z-index: 101;
+  fill: #101828;
 `;

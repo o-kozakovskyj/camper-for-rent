@@ -1,6 +1,5 @@
+import { useState } from "react";
 import { Field, Form, Formik, ErrorMessage } from "formik";
-import { useNavigate } from "react-router-dom";
-
 import * as Yup from "yup";
 
 import {
@@ -10,10 +9,12 @@ import {
   InputsGroup,
   SendButton,
   ErrorText,
+  SuccessMessage,
 } from "./Booking.styled";
 
 const Booking = () => {
-  const navigate = useNavigate();
+  const [successMessage, setSuccessMessage] = useState("");
+
   const SignupSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, "Too Short!")
@@ -24,8 +25,13 @@ const Booking = () => {
     comment: Yup.string().required("Required"),
   });
 
-  const handleSubmit = () => {
-    navigate(`/`, { replace: true });
+  const handleSubmit = (values, { resetForm }) => {
+    setSuccessMessage("Form successfully sent!");
+    resetForm();
+
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 3000);
   };
 
   return (
@@ -40,41 +46,62 @@ const Booking = () => {
         onSubmit={handleSubmit}
         validationSchema={SignupSchema}
       >
-        <Form autoComplete="off">
-          <FormHeader>Book your campervan now</FormHeader>
+        {({ resetForm }) => (
+          <Form autoComplete="off">
+            <FormHeader>Book your campervan now</FormHeader>
 
-          <FormSecondaryText>
-            Stay connected! We are always ready to help you.
-          </FormSecondaryText>
+            <FormSecondaryText>
+              Stay connected! We are always ready to help you.
+            </FormSecondaryText>
 
-          <InputsGroup>
-            <Field type="text" name="name" id="name" placeholder="Name" />
-            <ErrorMessage
-              render={(msg) => <ErrorText>{msg}</ErrorText>}
-              name="name"
-            />
+            <InputsGroup>
+              <Field type="text" name="name" id="name" placeholder="Name*" />
+              <ErrorMessage
+                render={(msg) => <ErrorText>{msg}</ErrorText>}
+                name="name"
+              />
 
-            <Field type="email" name="email" id="email" placeholder="Email" />
-            <ErrorMessage
-              render={(msg) => <ErrorText>{msg}</ErrorText>}
-              name="email"
-            />
+              <Field
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email*"
+              />
+              <ErrorMessage
+                render={(msg) => <ErrorText>{msg}</ErrorText>}
+                name="email"
+              />
 
-            <Field type="date" name="date" id="date" />
-            <ErrorMessage
-              render={(msg) => <ErrorText>{msg}</ErrorText>}
-              name="date"
-            />
+              <Field
+                type="date"
+                name="date"
+                id="date"
+                placeholder="Booking date"
+              />
+              <ErrorMessage
+                render={(msg) => <ErrorText>{msg}</ErrorText>}
+                name="date"
+              />
 
-            <Field as="textarea" name="comment" id="comment" rows="5" />
-            <ErrorMessage
-              render={(msg) => <ErrorText>{msg}</ErrorText>}
-              name="comment"
-            />
-          </InputsGroup>
+              <Field
+                as="textarea"
+                name="comment"
+                id="comment"
+                rows="5"
+                placeholder="Comment*"
+              />
+              <ErrorMessage
+                render={(msg) => <ErrorText>{msg}</ErrorText>}
+                name="comment"
+              />
+            </InputsGroup>
 
-          <SendButton type="submit">Send</SendButton>
-        </Form>
+            <SendButton type="submit">Send</SendButton>
+            {successMessage && (
+              <SuccessMessage>{successMessage}</SuccessMessage>
+            )}
+          </Form>
+        )}
       </Formik>
     </BookingContainer>
   );
