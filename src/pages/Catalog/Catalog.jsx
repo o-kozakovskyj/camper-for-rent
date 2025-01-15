@@ -1,10 +1,12 @@
 import CatalogFilterForm from "./../../components/Catalog/FilterForm/FilterForm";
-import {
-  CamperCardsContainer,
-  CatalogContainer,
-  CatalogPageContainer,
-  LoadMoreButton,
-} from "./Catalog.styled";
+import * as Styled from "./Catalog.styled";
+// {
+//   CamperCardsContainer,
+//   CatalogContainer,
+//   CatalogPageContainer,
+//   LoadMoreButton,
+// }
+
 import CamperCard from "./../../components/Catalog/CamperCard/CamperCard";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -32,10 +34,10 @@ const CatalogPage = () => {
   const favoritedAdverts = useSelector(selectFavorites);
 
   return (
-    <CatalogPageContainer>
+    <Styled.CatalogPageContainer>
       <CatalogFilterForm />
-      <CatalogContainer>
-        <CamperCardsContainer>
+      <Styled.CatalogContainer>
+        <Styled.CamperCardsContainer>
           {filteredAdverts.length > 0
             ? shownAdverts.map((advert) => (
                 <CamperCard
@@ -49,13 +51,13 @@ const CatalogPage = () => {
             : error
             ? error
             : "Nothing found."}
-        </CamperCardsContainer>
+        </Styled.CamperCardsContainer>
 
         {isShownButton && (
-          <LoadMoreButton onClick={handleLoadMore}>Load more</LoadMoreButton>
+          <Styled.LoadMoreButton onClick={handleLoadMore}>Load more</Styled.LoadMoreButton>
         )}
-      </CatalogContainer>
-    </CatalogPageContainer>
+      </Styled.CatalogContainer>
+    </Styled.CatalogPageContainer>
   );
 };
 

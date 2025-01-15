@@ -1,21 +1,23 @@
-import styled from "styled-components";
+// import styled from "styled-components";
+import { Box, Button, styled } from "@mui/material";
 
-export const CatalogPageContainer = styled.div`
+// export const CatalogPageContainer = styled.div`
+export const CatalogPageContainer = styled(Box)`
   display: flex;
   flex-direction: row;
   gap: 64px;
 
   padding: 40px 64px;
 
-  & > div:first-child {
+  /* & > div:first-child {
     width: 360px;
   }
   & > div:last-child {
     width: 888px;
-  }
+  } */
 `;
 
-export const CatalogContainer = styled.div`
+export const CatalogContainer = styled(Box)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,13 +26,13 @@ export const CatalogContainer = styled.div`
   gap: 50px;
 `;
 
-export const CamperCardsContainer = styled.div`
+export const CamperCardsContainer = styled(Box)`
   display: flex;
   flex-direction: column;
   gap: 32px;
 `;
 
-export const LoadMoreButton = styled.button`
+export const LoadMoreButton = styled(Button)`
   padding: 16px 32px;
   background-color: #ffffff;
   font-size: 16px;
