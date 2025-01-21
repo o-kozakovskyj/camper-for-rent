@@ -7,8 +7,21 @@ import {
 import logo from "../../assets/svg/logo.svg";
 
 import { NavLink, Link } from "react-router-dom";
+import { Switch } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { selectMode } from "../../redux/filters/selectors";
+import {
+  changeFiltersAction,
+  changeModeActions,
+} from "../../redux/filters/filterSlice";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const handleTheme = (e) => {
+    e.target.checked
+      ? dispatch(changeModeActions("dark"))
+      : dispatch(changeModeActions("light"));
+  };
   return (
     <HeaderContainer>
       <NavContainer>
@@ -26,6 +39,7 @@ const Header = () => {
           </li>
         </NavList>
       </NavContainer>
+      <Switch onChange={handleTheme} />
     </HeaderContainer>
   );
 };

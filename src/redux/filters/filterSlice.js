@@ -4,6 +4,7 @@ const initialState = {
   location: '',
   equipment: [],
   type: '',
+  mode : "dark"
 };
 
 const filtersSlice = createSlice({
@@ -13,11 +14,15 @@ const filtersSlice = createSlice({
     changeFilters(state, { payload }) {
       return payload;
     },
+    changeMode(state, { payload }) {
+       state.mode = payload
+    }
   },
 });
 
 const filtersReducer = filtersSlice.reducer;
 export default filtersReducer;
 
-const { changeFilters: changeFiltersAction } = filtersSlice.actions;
-export { changeFiltersAction };
+const {changeMode: changeModeActions, changeFilters: changeFiltersAction,  } =
+  filtersSlice.actions;
+export { changeFiltersAction, changeModeActions };

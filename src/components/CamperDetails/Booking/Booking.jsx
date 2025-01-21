@@ -7,10 +7,10 @@ import {
   FormHeader,
   FormSecondaryText,
   InputsGroup,
-  SendButton,
   ErrorText,
   SuccessMessage,
 } from "./Booking.styled";
+import { ButtonGeneral } from "../../ButtonGeneral/ButtonGeneral";
 
 const Booking = () => {
   const [successMessage, setSuccessMessage] = useState("");
@@ -96,7 +96,7 @@ const Booking = () => {
               />
             </InputsGroup>
 
-            <SendButton type="submit">Send</SendButton>
+            <ButtonGeneral type="submit">Send</ButtonGeneral>
             {successMessage && (
               <SuccessMessage>{successMessage}</SuccessMessage>
             )}
