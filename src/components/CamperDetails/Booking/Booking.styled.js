@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PrimaryButton } from "../../../styles/components.styled";
+
 
 export const BookingContainer = styled.div`
   padding: 24px;
@@ -45,11 +45,11 @@ export const InputsGroup = styled.div`
   }
 `;
 
-export const SendButton = styled(PrimaryButton)`
-  padding: 16px 60px;
-  display: block;
-  margin: 0 auto;
-`;
+// export const SendButton = styled(PrimaryButton)`
+//   padding: 16px 60px;
+//   display: block;
+//   margin: 0 auto;
+// `;
 
 export const ErrorText = styled.span`
   color: red;
