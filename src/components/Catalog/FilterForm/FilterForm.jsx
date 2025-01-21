@@ -11,12 +11,12 @@ import {
   LocationContainer,
   LocationInput,
   LocationTag,
-  SearchButton,
   TypeButtonGroup,
 } from "./FilterForm.styled";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFilters } from "../../../redux/filters/selectors";
 import { changeFiltersAction } from "../../../redux/filters/filterSlice";
+import { ButtonGeneral } from "../../ButtonGeneral/ButtonGeneral";
 
 const CatalogFilterForm = () => {
   const filters = useSelector(selectFilters);
@@ -151,7 +151,7 @@ const CatalogFilterForm = () => {
             </FilterButton>
           </TypeButtonGroup>
 
-          <SearchButton type="submit">Search</SearchButton>
+          <ButtonGeneral type="submit" >Search</ButtonGeneral>
         </Form>
       </Formik>
     </FilterContainer>

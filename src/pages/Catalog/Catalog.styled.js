@@ -1,7 +1,6 @@
 // import styled from "styled-components";
 import { Box, Button, styled } from "@mui/material";
 
-// export const CatalogPageContainer = styled.div`
 export const CatalogPageContainer = styled(Box)`
   display: flex;
   flex-direction: row;

@@ -1,6 +1,5 @@
 import { Field } from "formik";
 import styled from "styled-components";
-import { PrimaryButton } from "../../../styles/components.styled";
 
 export const FilterContainer = styled.div``;
 
@@ -106,8 +105,4 @@ export const FilterTag = styled.p`
 
   font-weight: 500;
   color: var(--secondary);
-`;
-
-export const SearchButton = styled(PrimaryButton)`
-  padding: 16px 60px;
 `;
