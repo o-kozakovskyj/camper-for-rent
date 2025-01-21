@@ -1,20 +1,18 @@
 import sprite from "../../../assets/svg/sprite.svg";
-import {
-  CamperImageContainer,
-  CamperInfoContainer,
-  CardContainer,
-  Description,
-  DetailsContainer,
-  HeartButton,
-  LocationContainer,
-  MainInfoContainer,
-  MainLineContainer,
-  RatingIcon,
-  RatingInfo,
-  SecondaryInfoContainer,
-  SecondaryLineContainer,
-  ShowMoreButton,
-} from "./CamperCard.styled";
+import * as Styled from "./CamperCard.styled";
+// import {
+//   CamperImageContainer,
+//   CamperInfoContainer,
+//   CardContainer,
+//   Description,
+//   DetailsContainer,
+//   LocationContainer,
+//   MainInfoContainer,
+//   MainLineContainer,
+//   RatingInfo,
+//   SecondaryInfoContainer,
+//   SecondaryLineContainer,
+// } from "./CamperCard.styled";
 import capitalizeFirstLetter from "../../../utils/capitalize";
 import { useState } from "react";
 import Modal from "./../../../components/Modal/Modal";
@@ -24,6 +22,8 @@ import {
   addToFavoritesAction,
   removeFromFavoritesAction,
 } from "../../../redux/favorites/favoritesSlice";
+import { ButtonGeneral } from "../../ButtonGeneral/ButtonGeneral";
+import HoverRating from "../../HoverRating/HoverRating";
 
 const CamperCard = ({ camperInfo, favorited }) => {
   const dispatch = useDispatch();
@@ -61,56 +61,82 @@ const CamperCard = ({ camperInfo, favorited }) => {
     setIsFavorited(!isFavorited);
   };
 
+  const details = [
+    {
+      id: 1,
+      icon: Styled.Automatic,
+      title: "Automatic",
+    },
+    {
+      id: 2,
+      icon: Styled.Petrol,
+      title: "Petrol",
+    },
+    {
+      id: 3,
+      icon: Styled.Coffee,
+      title: "Kitchen",
+    },
+    {
+      id: 4,
+      icon: Styled.Air,
+      title: "AC",
+    },
+  ];
+  
   return (
     <>
-      <CardContainer>
-        <CamperImageContainer>
+      <Styled.CardContainer>
+        <Styled.CamperImageContainer>
           <img src={gallery[0]} alt="Camper" width="290px" height="310px" />
-        </CamperImageContainer>
+        </Styled.CamperImageContainer>
 
-        <CamperInfoContainer>
-          <MainLineContainer>
-            <MainInfoContainer>
+        <Styled.CamperInfoContainer>
+          <Styled.MainLineContainer>
+            <Styled.MainInfoContainer>
               <h3>{name}</h3>
 
               <span>&#8364;{price}</span>
-            </MainInfoContainer>
+            </Styled.MainInfoContainer>
 
-            <HeartButton
-              width="24px"
-              height="24px"
-              fill="none"
-              stroke="var(--main)"
-              onClick={handleClickFavorite}
-              className={isFavorited && "favorited"}
-            >
-              <use href={`${sprite}#icon-heart`} />
-            </HeartButton>
-          </MainLineContainer>
+            <Styled.HeartButton onClick={handleClickFavorite}>
+              <Styled.HeartIcon />
+            </Styled.HeartButton>
+          </Styled.MainLineContainer>
 
-          <SecondaryLineContainer>
-            <RatingIcon width="16px" height="16px" fill="none">
+          <Styled.SecondaryLineContainer>
+            {/* <RatingIcon width="16px" height="16px" fill="none">
               <use href={`${sprite}#icon-rating`} />
-            </RatingIcon>
+            </RatingIcon> */}
+            <HoverRating />
 
-            <SecondaryInfoContainer>
-              <RatingInfo>
-                {rating}({reviews.length} reviews)
-              </RatingInfo>
+            <Styled.SecondaryInfoContainer>
+                  <Styled.RatingInfo>
+                    {rating}({reviews.length} reviews)
+                  </Styled.RatingInfo>
 
-              <LocationContainer>
+              <Styled.LocationContainer>
                 <svg width="16px" height="16px" className="icon-fill">
                   <use href={`${sprite}#icon-Vector`} />
                 </svg>
                 <span>{location}</span>
-              </LocationContainer>
-            </SecondaryInfoContainer>
-          </SecondaryLineContainer>
+              </Styled.LocationContainer>
+            </Styled.SecondaryInfoContainer>
+          </Styled.SecondaryLineContainer>
 
-          <Description>{description}</Description>
+          <Styled.Description>{description}</Styled.Description>
 
-          <DetailsContainer>
-            <li>
+          <Styled.DetailsContainer>
+            {details.map(({ id, icon: Icon, title }) => (
+              <Styled.Detail key={id}>
+                <Styled.Paper elevation={3}>
+                  <Icon />
+                  <Styled.IconTitle>{title}</Styled.IconTitle>
+                </Styled.Paper>
+              </Styled.Detail>
+            ))}
+
+            {/* <li>
               <svg width="20px" height="20px">
                 <use href={`${sprite}#icon-diagram`} />
               </svg>
@@ -134,12 +160,12 @@ const CamperCard = ({ camperInfo, favorited }) => {
                 <use href={`${sprite}#icon-wind`} />
               </svg>
               <span>AC</span>
-            </li>
-          </DetailsContainer>
+            </li> */}
+          </Styled.DetailsContainer>
 
-          <ShowMoreButton onClick={handleShowMore}>Show More</ShowMoreButton>
-        </CamperInfoContainer>
-      </CardContainer>
+          <ButtonGeneral onClick={handleShowMore}>Show More</ButtonGeneral>
+        </Styled.CamperInfoContainer>
+      </Styled.CardContainer>
       <Modal open={isModalOpen} onClose={onClose}>
         <CamperDetails camperInfo={camperInfo} />
       </Modal>
