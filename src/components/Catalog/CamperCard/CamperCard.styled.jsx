@@ -70,8 +70,8 @@ export const MainInfoContainer = styled(Box)`
             </HeartButton> */}
 
 export const HeartButton = styled(IconButton)`
-width="24px"
-height="24px"
+width:24px;
+height: 24px;
 `;
 
 export const HeartIcon = styled(FavoriteBorderIcon)`
