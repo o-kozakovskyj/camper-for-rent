@@ -1,19 +1,13 @@
-import {
-  HeaderContainer,
-  NavContainer,
-  NavList,
-  NavLogo,
-} from "./Header.styled";
+import * as Styled from "./Header.styled"
 import logo from "../../assets/svg/logo.svg";
 
-import { NavLink, Link } from "react-router-dom";
-import { Switch } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { selectMode } from "../../redux/filters/selectors";
+import { Link } from "react-router-dom";
+import { AppBar, Button, Switch, Toolbar } from "@mui/material";
+import { useDispatch } from "react-redux";
 import {
-  changeFiltersAction,
   changeModeActions,
 } from "../../redux/filters/filterSlice";
+import { ButtonGeneral } from "../ButtonGeneral/ButtonGeneral";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -23,24 +17,22 @@ const Header = () => {
       : dispatch(changeModeActions("light"));
   };
   return (
-    <HeaderContainer>
-      <NavContainer>
-        <NavLogo>
+    <AppBar>
+      <Toolbar>
+        <Styled.NavLogo>
           <Link to={"/"}>
             <img src={logo} alt="Your SVG" width="112px" />
           </Link>
-        </NavLogo>
-        <NavList>
-          <li>
-            <NavLink to={"/"}>Home</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/catalog"}>Catalog</NavLink>
-          </li>
-        </NavList>
-      </NavContainer>
-      <Switch onChange={handleTheme} />
-    </HeaderContainer>
+        </Styled.NavLogo>
+        <Button component={Link} to="/">
+          Home
+        </Button>
+        <Button component={Link} to="/catalog">
+          Catalogue
+        </Button>
+        <Switch onChange={handleTheme} />
+      </Toolbar>
+    </AppBar>
   );
 };
 
